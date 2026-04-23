@@ -58,7 +58,7 @@ def build_dot(nodes: List[NodeView], project_name: str, goal: str = "") -> str:
     for n in nodes:
         if n.parent_id is None:
             continue
-        bold = ' [penwidth=2.5, color="#333"]' if (
+        bold = ' [penwidth=2.5, color="#333333"]' if (
             n.id in path_ids and n.parent_id in path_ids
         ) else ''
         lines.append(f'  n{n.parent_id} -> n{n.id}{bold};')
